@@ -6,16 +6,17 @@
     <title>Portal Corporativo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Integrado para o Visual Azul e Branco */
+        /* CSS Integrado para o Visual Preto e Azul Claro */
         :root {
-            --cor-principal: #ffffff; /* Branco */
-            --cor-secundaria: #007bff; /* Azul Claro/Brilhante */
-            --cor-texto: #333333; /* Cinza Escuro para o texto */
+            --cor-fundo-geral: #000000; /* Preto para o fundo geral */
+            --cor-principal: #007bff; /* Azul Claro/Brilhante - Para os elementos principais (abas, linha do cabeçalho) */
+            --cor-secundaria: #ffffff; /* Branco - Para texto e logo em contraste */
+            --cor-texto-container: #333333; /* Cinza Escuro para o texto dentro do container */
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--cor-secundaria);
-            color: var(--cor-texto);
+            background-color: var(--cor-fundo-geral); /* Fundo geral preto */
+            color: var(--cor-texto-container); /* Cor do texto padrão do body */
             margin: 0;
             padding: 0;
             display: flex;
@@ -28,8 +29,8 @@
             max-width: 1000px;
             margin-top: 50px;
             padding: 20px;
-            background-color: #f8f9fa; /* Fundo levemente acinzentado */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: var(--cor-secundaria); /* Container principal em branco */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais escura para o fundo preto */
             border-radius: 8px;
         }
         header {
@@ -37,18 +38,19 @@
             justify-content: space-between;
             align-items: center;
             padding-bottom: 20px;
-            border-bottom: 3px solid var(--cor-principal);
+            border-bottom: 3px solid var(--cor-principal); /* Linha divisória em azul claro */
             margin-bottom: 30px;
         }
         .logo-container img {
             max-height: 50px; /* Ajuste o tamanho da sua logo */
+            filter: brightness(0) invert(1); /* Tenta transformar a logo em branco para contraste com o fundo azul do header se ela for escura */
         }
         .menu-titulo {
             text-align: center;
             flex-grow: 1;
         }
         .menu-titulo h1 {
-            color: var(--cor-principal);
+            color: var(--cor-principal); /* Título em azul claro */
             font-size: 1.8em;
             margin: 0;
         }
@@ -61,8 +63,8 @@
             display: block;
             padding: 15px 25px;
             text-align: center;
-            background-color: var(--cor-principal);
-            color: var(--cor-secundaria);
+            background-color: var(--cor-principal); /* Fundo das abas em azul claro */
+            color: var(--cor-secundaria); /* Texto das abas em branco */
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.1em;
