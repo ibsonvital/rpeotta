@@ -6,24 +6,31 @@
     <title>Portal Corporativo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Integrado para o Visual Fundo Azul Claro / Container Preto */
+        /* CSS Integrado para o Visual com Imagem de Fundo / Container Preto */
         :root {
-            --cor-fundo-geral: #ffffff; /* BRANCO para o fundo geral */
             --cor-container-principal: #000000; /* PRETO para o container central */
             --cor-botoes: #007bff; /* AZUL CLARO para os botões e linha do cabeçalho */
             --cor-texto-principal: #ffffff; /* BRANCO para o texto principal (título, texto dos botões) */
-            --cor-texto-secundario: #cccccc; /* Cinza claro para outros textos se precisar */
+            --cor-texto-secundario: #cccccc; /* Cinza claro para outros textos, se houver */
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--cor-fundo-geral); /* Fundo geral AZUL CLARO */
-            color: var(--cor-texto-principal); /* Cor padrão do texto do body (se for usada) */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
+            
+            /* --- CONFIGURAÇÕES DA IMAGEM DE FUNDO (PNG LOCAL) --- */
+            background-image: fundo.png; /* <<<<< USE O NOME EXATO DO SEU ARQUIVO PNG AQUI */
+            background-size: cover;         
+            background-position: center;    
+            background-repeat: no-repeat;   
+            background-attachment: fixed;   
+            /* ----------------------------------------------- */
+
+            color: var(--cor-texto-principal); 
         }
         .container {
             width: 90%;
@@ -31,7 +38,7 @@
             margin-top: 50px;
             padding: 20px;
             background-color: var(--cor-container-principal); /* CONTAINER PRINCIPAL EM PRETO */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
             border-radius: 8px;
         }
         header {
@@ -44,7 +51,6 @@
         }
         .logo-container img {
             max-height: 50px; /* Ajuste o tamanho da sua logo */
-            /* A logo já é branca, então não precisa de filtro. */
         }
         .menu-titulo {
             text-align: center;
