@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Corporativo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Integrado para o Visual Azul e Branco */
+        :root {
+            --cor-principal: #007bff; /* Azul Claro/Brilhante */
+            --cor-secundaria: #ffffff; /* Branco */
+            --cor-texto: #333333; /* Cinza Escuro para o texto */
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f8f9fa; /* Fundo levemente acinzentado */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--cor-principal);
+            margin-bottom: 30px;
+        }
+        .logo-container img {
+            max-height: 50px; /* Ajuste o tamanho da sua logo */
+        }
+        .menu-titulo {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .menu-titulo h1 {
+            color: var(--cor-principal);
+            font-size: 1.8em;
+            margin: 0;
+        }
+        .abas-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .aba-item {
+            display: block;
+            padding: 15px 25px;
+            text-align: center;
+            background-color: var(--cor-principal);
+            color: var(--cor-secundaria);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .aba-item:hover {
+            background-color: #0056b3; /* Um azul um pouco mais escuro ao passar o mouse */
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo da Empresa">
+            </div>
+            <div class="menu-titulo">
+                <h1>Portal de Documentos PETROBRAS</h1>
+            </div>
+        </header>
+
+        <div class="abas-container">
+            <a href="https://rpeottaprojeto.blob.core.windows.net/consolidado-petrobras-unificado/Acompanhamento%20de%20Planejamento.xlsx" 
+               target="_blank" 
+               class="aba-item">
+                Abrir Planilha: Acompanhamento de Planejamento
+            </a>
+
+            <a href="[LINK DO EXCEL 2 AQUI]" target="_blank" class="aba-item">
+                Outro Relatório Importante
+            </a>
+            
+            </div>
+    </div>
+</body>
+</html>
