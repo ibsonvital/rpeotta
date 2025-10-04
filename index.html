@@ -10,13 +10,13 @@
         :root {
             --cor-fundo-geral: #000000; /* Preto para o fundo geral */
             --cor-principal: #007bff; /* Azul Claro/Brilhante - Para os elementos principais (abas, linha do cabeçalho) */
-            --cor-secundaria: #ffffff; /* Branco - Para texto e logo em contraste */
+            --cor-secundaria: #ffffff; /* Branco - Para texto e container principal */
             --cor-texto-container: #333333; /* Cinza Escuro para o texto dentro do container */
         }
         body {
             font-family: 'Roboto', sans-serif;
             background-color: var(--cor-fundo-geral); /* Fundo geral preto */
-            color: var(--cor-texto-container); /* Cor do texto padrão do body */
+            color: var(--cor-texto-container);
             margin: 0;
             padding: 0;
             display: flex;
@@ -30,7 +30,7 @@
             margin-top: 50px;
             padding: 20px;
             background-color: var(--cor-secundaria); /* Container principal em branco */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais escura para o fundo preto */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
             border-radius: 8px;
         }
         header {
@@ -43,7 +43,8 @@
         }
         .logo-container img {
             max-height: 50px; /* Ajuste o tamanho da sua logo */
-            filter: brightness(0) invert(1); /* Tenta transformar a logo em branco para contraste com o fundo azul do header se ela for escura */
+            /* Se sua logo for escura, descomente a linha abaixo para tentar deixá-la branca */
+            /* filter: brightness(0) invert(1); */
         }
         .menu-titulo {
             text-align: center;
@@ -72,7 +73,7 @@
             transition: background-color 0.3s, transform 0.2s;
         }
         .aba-item:hover {
-            background-color: #0056b3; /* Um azul um pouco mais escuro ao passar o mouse */
+            background-color: #0056b3; /* Azul um pouco mais escuro ao passar o mouse */
             transform: translateY(-2px);
         }
     </style>
