@@ -6,17 +6,18 @@
     <title>Portal Corporativo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS Integrado para o Visual Preto e Azul Claro/Branco */
+        /* CSS Integrado para o Visual Fundo Azul Claro / Container Preto */
         :root {
-            --cor-fundo-geral: #000000; /* PRETO para o fundo geral */
-            --cor-principal: #007bff; /* AZUL CLARO/BRILHANTE - Para botões, linha e título */
-            --cor-secundaria: #ffffff; /* BRANCO - Para o container central e texto do botão */
-            --cor-texto-container: #333333; /* Cinza Escuro para o texto dentro do container */
+            --cor-fundo-geral: #007bff; /* AZUL CLARO para o fundo geral */
+            --cor-container-principal: #000000; /* PRETO para o container central */
+            --cor-botoes: #007bff; /* AZUL CLARO para os botões e linha do cabeçalho */
+            --cor-texto-principal: #ffffff; /* BRANCO para o texto principal (título, texto dos botões) */
+            --cor-texto-secundario: #cccccc; /* Cinza claro para outros textos se precisar */
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--cor-fundo-geral); /* APLICA O PRETO NO FUNDO */
-            color: var(--cor-texto-container);
+            background-color: var(--cor-fundo-geral); /* Fundo geral AZUL CLARO */
+            color: var(--cor-texto-principal); /* Cor padrão do texto do body (se for usada) */
             margin: 0;
             padding: 0;
             display: flex;
@@ -29,7 +30,7 @@
             max-width: 1000px;
             margin-top: 50px;
             padding: 20px;
-            background-color: var(--cor-secundaria); /* CONTAINER PRINCIPAL EM BRANCO */
+            background-color: var(--cor-container-principal); /* CONTAINER PRINCIPAL EM PRETO */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
             border-radius: 8px;
         }
@@ -38,20 +39,19 @@
             justify-content: space-between;
             align-items: center;
             padding-bottom: 20px;
-            border-bottom: 3px solid var(--cor-principal); /* Linha divisória em azul claro */
+            border-bottom: 3px solid var(--cor-botoes); /* Linha divisória em AZUL CLARO */
             margin-bottom: 30px;
         }
         .logo-container img {
             max-height: 50px; /* Ajuste o tamanho da sua logo */
-            /* Se sua logo for escura, pode manter esta linha para que ela apareça contra o fundo branco */
-            /* Se for uma logo em vetor clara, pode não precisar de ajustes */
+            /* A logo já é branca, então não precisa de filtro. */
         }
         .menu-titulo {
             text-align: center;
             flex-grow: 1;
         }
         .menu-titulo h1 {
-            color: var(--cor-principal); /* Título em AZUL CLARO */
+            color: var(--cor-texto-principal); /* Título em BRANCO */
             font-size: 1.8em;
             margin: 0;
         }
@@ -64,8 +64,8 @@
             display: block;
             padding: 15px 25px;
             text-align: center;
-            background-color: var(--cor-principal); /* Fundo dos botões em AZUL CLARO */
-            color: var(--cor-secundaria); /* Texto dos botões em BRANCO */
+            background-color: var(--cor-botoes); /* Fundo dos botões em AZUL CLARO */
+            color: var(--cor-texto-principal); /* Texto dos botões em BRANCO */
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.1em;
